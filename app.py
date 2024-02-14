@@ -13,6 +13,8 @@ import sendMail
 app = dash.Dash(__name__, suppress_callback_exceptions=True, title="LLM-Resume",
                 external_stylesheets=[dbc.themes.PULSE])
 
+server = app.server
+
 
 def b64_image(image_filename):
     with open(image_filename, 'rb') as f:
