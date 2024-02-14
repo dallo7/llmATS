@@ -144,7 +144,7 @@ def update_output(name, phone, email, contents, filename, n_clicks, ):
 
                     summary = LLms.facebookBL(resumeTxt)
 
-                    if finalScore >= 12:
+                    if finalScore >= 14:
                         subject = "Application Successful"
                         body = "We are reviewing your application! 🤗"
                         sendMail.sendMail(email, subject, body)
