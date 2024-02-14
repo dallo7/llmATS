@@ -3,3 +3,4 @@ requests==2.31.0
 dash==2.9.3
 gunicorn
 dash-bootstrap-components==1.4.2
+pypdf2==3.0.1
