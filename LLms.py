@@ -4,7 +4,10 @@ import formatString
 
 
 def flant5xxl(resumeText):
-    API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"
+    # API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"
+    # headers = {"Authorization": "Bearer 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"}
+    
+    API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b"
     headers = {"Authorization": "Bearer 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"}
 
     def query(payload):
@@ -16,14 +19,16 @@ def flant5xxl(resumeText):
     txt = formatString.removeFormat(resumeText)
 
     output = query({
-        "inputs": f"Assume you are a recruiter, Score or Rate the resume shared Based on each experience, Python Experience , Deep learning Experience, AWS Experience : Rate this Applicants resume {txt}"
+        "inputs": f"Assume you are a recruiter, Score or Rate the resume shared Based on each experience, Python Experience, Deep learning Experience, AWS Experience: Rate these Applicants resume {txt}"
     })
 
     return output
 
 
 def facebookBL(text):
-    API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
+    # API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
+    # headers = {"Authorization": "Bearer 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"}
+    API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b"
     headers = {"Authorization": "Bearer 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"}
 
     def query(payload):
